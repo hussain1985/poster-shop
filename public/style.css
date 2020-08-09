@@ -26,7 +26,7 @@ button:focus, input:focus {
 
 html, body {
     width: 100%;
-    height: 100%;
+    height: auto;
     margin: 0;
 }
 
@@ -46,6 +46,7 @@ body {
     flex: 0;
     background-color: #157ed2;
 }
+
 
 .main {
     padding: 2rem;
@@ -366,3 +367,34 @@ body {
         display: none;
     }
 }
+
+.fade-enter{
+    opacity: 0;
+}
+.fade-enter-active {    
+    transition: opacity 0.5s
+}
+.fade-enter-to{
+
+}
+.fade-leave {
+
+}
+.fade-leave-to {
+    transition: opacity 0.5s;
+    opacity: 0;
+}
+/*Hiding all the children div*/
+[v-cloak] > * {
+    display: none;
+}
+/*displaying loading div */
+
+[v-cloak] > #loading {
+    display: block;
+    padding: 200px;
+}
+#loading {
+    display: none;
+}
+
